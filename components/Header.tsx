@@ -1,20 +1,12 @@
 import React from "react";
-import {Flex, Heading} from "@chakra-ui/react";
-import {HamburgerIcon} from "@chakra-ui/icons";
+import {Flex, Heading, Icon} from "@chakra-ui/react";
+import {BiMenu} from "react-icons/bi";
 
 const Header = () => {
   return (
-    <Flex
-      align="center"
-      as="header"
-      justify="space-between"
-      position="absolute"
-      px={4}
-      top="0"
-      width="100vw"
-    >
+    <Flex align="center" as="header" bg="primary.800" justify="space-between" p={6}>
       <Heading>Rhodokros</Heading>
-      <HamburgerIcon boxSize={6} cursor="pointer" />
+      <Icon as={BiMenu} boxSize={6} cursor="pointer" />
     </Flex>
   );
 };
