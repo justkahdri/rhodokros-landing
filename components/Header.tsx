@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <Flex align="center" as="header" bg="primary.800" color="white" justify="space-between" p={6}>
       <Heading>RhodoKros</Heading>
-      <Icon as={BiMenu} boxSize={6} cursor="pointer" />
+      <Icon as={BiMenu} boxSize={8} cursor="pointer" />
     </Flex>
   );
 };

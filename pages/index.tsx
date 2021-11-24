@@ -1,12 +1,14 @@
 import React from "react";
-import {Box, Flex, Heading, Text, Button, Stack} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text, Button, Stack, Link, Icon} from "@chakra-ui/react";
 import type {NextPage} from "next";
 import Head from "next/head";
+import {BsArrowRight} from "react-icons/bs";
 import Image from "next/image";
 
-import banner from "@images/banner.jpg";
+import banner from "@images/banner_2.png";
 import Header from "@components/Header";
 import Footer from "@components/Footer";
+import SideImage from "@components/SideImage";
 
 const Home: NextPage = () => {
   return (
@@ -20,12 +22,14 @@ const Home: NextPage = () => {
         bg="primary.800"
         className="hero"
         color="white"
-        h="600px"
+        h="650px"
+        justify="space-between"
         mb="200px"
-        p={6}
         position="relative"
+        px={{base: 6, lg: "8vw", "2xl": "15vw"}}
+        py={6}
       >
-        <Box flex={1} my="7%">
+        <Box flex={1} maxW="600px" my="7%">
           <Heading as="h2" fontSize={54} fontWeight={900}>
             A journey to Argentina as you&apos;ve never seen before.
           </Heading>
@@ -34,10 +38,10 @@ const Home: NextPage = () => {
             silver 925.
           </Text>
           <Stack direction="row" height={12}>
-            <Button colorScheme="red" flex={1} height="100%">
+            <Button colorScheme="primary" flex={1} fontWeight={500} height="100%">
               Comprar
             </Button>
-            <Button colorScheme="silver" flex={1} height="100%" variant="light">
+            <Button colorScheme="silver" flex={1} fontWeight={500} height="100%" variant="light">
               Saber mas
             </Button>
           </Stack>
@@ -61,6 +65,16 @@ const Home: NextPage = () => {
           </Box>
         </Box>
       </Flex>
+      <SideImage alt="Side" layout="fill" src={"/vectors/map.svg"}>
+        <Heading>Adapta Pency a tu comercio</Heading>
+        <Text>
+          Úsalo como tienda online o carta digital. Habilita el envío de los pedidos a WhatsApp o
+          utilizalo como catálogo.
+        </Text>
+        <Link colorScheme="primary">
+          Explora comercios <Icon as={BsArrowRight} boxSize={5} />
+        </Link>
+      </SideImage>
       <Footer />
     </>
   );
