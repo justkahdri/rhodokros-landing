@@ -1,17 +1,29 @@
-import {Stack, Box, SimpleGrid} from "@chakra-ui/react";
+import {Stack, Box} from "@chakra-ui/react";
 import Image, {ImageProps} from "next/image";
 import React, {FC} from "react";
 
-const SideImage: FC<ImageProps> = ({children, ...rest}) => {
+interface Props extends ImageProps {
+  isEven?: boolean;
+}
+
+const SideImage: FC<Props> = ({children, isEven = false, ...rest}) => {
+  // columns={2} gap={16}
   return (
-    <SimpleGrid columns={2} gap={16} height="500px" p={6}>
-      <Stack justify="center" width="70%">
+    <Stack
+      direction={isEven ? "row-reverse" : "row"}
+      height="600px"
+      justifyContent="space-between"
+      px={{base: 6, lg: "8vw", "2xl": "15vw"}}
+      py={12}
+      spacing={4}
+    >
+      <Stack justify="center" spacing={6} width="50%">
         {children}
       </Stack>
-      <Box as="figure" height="100%" position="relative" width="fill-available">
+      <Box as="figure" flex={1} height="100%" position="relative">
         <Image alt="alt default" objectFit="contain" {...rest} />
       </Box>
-    </SimpleGrid>
+    </Stack>
   );
 };
 

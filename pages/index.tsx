@@ -2,7 +2,7 @@ import React from "react";
 import {Box, Flex, Heading, Text, Button, Stack, Link, Icon} from "@chakra-ui/react";
 import type {NextPage} from "next";
 import Head from "next/head";
-import {BsArrowRight} from "react-icons/bs";
+import {BiLinkExternal} from "react-icons/bi";
 import Image from "next/image";
 
 import banner from "@images/banner_2.png";
@@ -25,9 +25,9 @@ const Home: NextPage = () => {
         h="650px"
         justify="space-between"
         mb="200px"
+        p={6}
         position="relative"
-        px={{base: 6, lg: "8vw", "2xl": "15vw"}}
-        py={6}
+        px={{lg: "8vw", "2xl": "15vw"}}
       >
         <Box flex={1} maxW="600px" my="7%">
           <Heading as="h2" fontSize={54} fontWeight={900}>
@@ -39,10 +39,10 @@ const Home: NextPage = () => {
           </Text>
           <Stack direction="row" height={12}>
             <Button colorScheme="primary" flex={1} fontWeight={500} height="100%">
-              Comprar
+              See Gallery
             </Button>
             <Button colorScheme="silver" flex={1} fontWeight={500} height="100%" variant="light">
-              Saber mas
+              About
             </Button>
           </Stack>
         </Box>
@@ -65,14 +65,31 @@ const Home: NextPage = () => {
           </Box>
         </Box>
       </Flex>
-      <SideImage alt="Side" layout="fill" src={"/vectors/map.svg"}>
-        <Heading>Adapta Pency a tu comercio</Heading>
+      <SideImage isEven alt="Side" layout="fill" src={"/vectors/jewelry.svg"}>
+        <Heading as="h3">See our work.</Heading>
         <Text>
-          Úsalo como tienda online o carta digital. Habilita el envío de los pedidos a WhatsApp o
-          utilizalo como catálogo.
+          {"You can see our gallery or go to our "}
+          <Link isExternal fontWeight={400} href="https://www.instagram.com/rhodokros">
+            instagram
+          </Link>
+          {" were we post our products periodically."}
         </Text>
-        <Link colorScheme="primary">
-          Explora comercios <Icon as={BsArrowRight} boxSize={5} />
+        <Link>Go to gallery</Link>
+      </SideImage>
+      <SideImage alt="Side" layout="fill" src={"/vectors/map.svg"}>
+        <Heading as="h3">Visit our shop</Heading>
+        <Text>
+          We are in <i>&quot;El conventillo de los sueños&quot;</i> at La Boca, Buenos Aires.
+          Usually from Monday to Saturday, between 10:00-16:00.
+        </Text>
+        <Link
+          isExternal
+          align="center"
+          display="flex"
+          href="https://www.google.com/maps/place/RhodoKros/@-34.6398246,-58.3626528,15z/data=!4m5!3m4!1s0x0:0xf8455fab32e62143!8m2!3d-34.6398009!4d-58.3626664"
+        >
+          See on Google Maps
+          <Icon as={BiLinkExternal} boxSizing="content-box" height="auto" pl={2} />
         </Link>
       </SideImage>
       <Footer />

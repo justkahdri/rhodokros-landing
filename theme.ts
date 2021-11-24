@@ -8,9 +8,6 @@ const theme = extendTheme({
       body: {
         color: "blackAlpha.800",
       },
-      p: {
-        fontSize: "20px",
-      },
     },
   },
   fonts: {
@@ -24,11 +21,18 @@ const theme = extendTheme({
     silver: {500: "#e2e2e2"},
   },
   components: {
-    // Text: {
-    //   defaultProps: {
-    //     fontSize: "20px",
-    //   },
-    // },
+    Link: {
+      baseStyle: {
+        fontSize: "20px",
+        fontWeight: 600,
+        color: "primary.500",
+      },
+    },
+    Text: {
+      baseStyle: {
+        fontSize: "20px",
+      },
+    },
     Button: {
       // defaultProps: {},
       variants: {

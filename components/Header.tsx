@@ -1,13 +1,23 @@
 import React from "react";
-import {Flex, Heading, Icon} from "@chakra-ui/react";
-import {BiMenu} from "react-icons/bi";
+import {Stack, Heading} from "@chakra-ui/react";
+import Image from "next/image";
+
+import logo from "/public/vectors/logo_white.svg";
 
 const Header = () => {
   return (
-    <Flex align="center" as="header" bg="primary.800" color="white" justify="space-between" p={6}>
-      <Heading>RhodoKros</Heading>
-      <Icon as={BiMenu} boxSize={8} cursor="pointer" />
-    </Flex>
+    <Stack
+      align="center"
+      as="header"
+      bg="primary.800"
+      color="white"
+      direction="row"
+      p={6}
+      px={{lg: "8vw", "2xl": "15vw"}}
+    >
+      <Image alt="Logo" height={36} src={logo} width={36} />
+      <Heading as="h1">RhodoKros</Heading>
+    </Stack>
   );
 };
 
