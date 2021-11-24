@@ -19,6 +19,7 @@ const Home: NextPage = () => {
         as="section"
         bg="primary.800"
         className="hero"
+        color="white"
         h="600px"
         mb="200px"
         p={6}
@@ -26,13 +27,14 @@ const Home: NextPage = () => {
       >
         <Box flex={1} my="7%">
           <Heading as="h2" fontSize={54} fontWeight={900}>
-            Vende online gratis y a tu manera
+            A journey to Argentina as you&apos;ve never seen before.
           </Heading>
           <Text mb={8} mt={6}>
-            Coloca tus productos a un clic de tus clientes y recibe los pedidos en tu WhatsApp.
+            Handmade jewelry with a strong relation with the country. Made with rhodochrosite and
+            silver 925.
           </Text>
           <Stack direction="row" height={12}>
-            <Button flex={1} height="100%">
+            <Button colorScheme="red" flex={1} height="100%">
               Comprar
             </Button>
             <Button colorScheme="silver" flex={1} height="100%" variant="light">
