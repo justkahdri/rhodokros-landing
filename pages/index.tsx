@@ -5,21 +5,33 @@ import type {NextPage} from "next";
 import SideImage from "@components/SideImage";
 import Hero from "@components/Hero";
 import Layout from "@components/Layout";
+import {instagram} from "@utils/links";
 
 const Home: NextPage = () => {
   return (
     <Layout>
       <Hero />
+      <SideImage.container alt="Questioning mark" src="/vectors/question.svg">
+        <SideImage.title>What is the Rhodochrosite?</SideImage.title>
+        <Text>
+          The rhodochrosite is a semi-precious stone with a distinctive pink color. It comes from
+          Catamarca, a province located on the north west of Argentina.
+        </Text>
+        <Text>
+          It is known by its uses by the <i>Inca</i>, pre-Columbian emperors of South America. Based
+          on an old legend, the stone is symbol of peace, pardon and deep love.
+        </Text>
+      </SideImage.container>
       <SideImage.container isEven alt="Woman with jewelry" src={"/vectors/jewelry.svg"}>
         <SideImage.title>See our work.</SideImage.title>
         <Text>
           {"You can see our gallery or go to our "}
-          <SideImage.external fontWeight={400} href="https://www.instagram.com/rhodokros">
-            Instagram
+          <SideImage.external fontWeight={400} href={instagram.url}>
+            {instagram.name}
           </SideImage.external>
           {" were we post our featured products periodically."}
         </Text>
-        <Link>Go to gallery</Link>
+        <Link href="/gallery">Go to gallery</Link>
       </SideImage.container>
       <SideImage.container alt="Map illustration" src={"/vectors/map.svg"}>
         <SideImage.title>Visit our shop</SideImage.title>
@@ -31,14 +43,11 @@ const Home: NextPage = () => {
           See on Google Maps
         </SideImage.external>
       </SideImage.container>
-      <SideImage.container isEven alt="Sharing vector" src="/vectors/share.svg">
-        <SideImage.title>Veritatis obcaecati</SideImage.title>
+      <SideImage.container isEven alt="Introductory illustration" src="/vectors/about.svg">
+        <SideImage.title>About</SideImage.title>
         <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia, molestiae quas
-          vel sint commodi repudiandae consequuntur.
-        </Text>
-        <Text>
-          Impedit sit sunt quaerat, odit, tenetur error, harum nesciunt ipsum debitis quas aliquid.
+          Guillermo Montes has been working with rhodochrosite and silver since 2005 and throughout
+          the years he became an expert in crafting jewelry.
         </Text>
       </SideImage.container>
     </Layout>

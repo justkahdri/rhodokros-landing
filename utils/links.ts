@@ -6,4 +6,6 @@ const SOCIAL_LINKS = [
   {name: "Pinterest", icon: FaPinterest, url: "https://pin.it/3WaOnX1"},
 ];
 
+export const instagram = SOCIAL_LINKS[1];
+
 export default SOCIAL_LINKS;

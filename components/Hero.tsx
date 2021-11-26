@@ -25,10 +25,25 @@ const Hero = () => {
           silver 925.
         </Text>
         <Stack direction="row" height={12}>
-          <Button colorScheme="primary" flex={1} fontWeight={500} height="100%">
+          <Button
+            as="a"
+            colorScheme="primary"
+            flex={1}
+            fontWeight={500}
+            height="100%"
+            href="/gallery"
+          >
             See Gallery
           </Button>
-          <Button colorScheme="silver" flex={1} fontWeight={500} height="100%" variant="light">
+          <Button
+            as="a"
+            colorScheme="silver"
+            flex={1}
+            fontWeight={500}
+            height="100%"
+            href="/about"
+            variant="light"
+          >
             About
           </Button>
         </Stack>
