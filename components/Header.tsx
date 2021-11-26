@@ -12,6 +12,7 @@ const Header = () => {
       bg="primary.800"
       color="white"
       direction="row"
+      justify={{base: "center", sm: "initial"}}
       p={6}
       px={{lg: "8vw", "2xl": "15vw"}}
     >
