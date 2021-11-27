@@ -18,27 +18,24 @@ const Home: NextPage = () => {
           Catamarca, a province located on the north west of Argentina.
         </Text>
         <Text>
-          It is known by its uses by the <i>Inca</i>, pre-Columbian emperors of South America. Based
-          on an old legend, the stone is symbol of peace, pardon and deep love.
+          It is known by its uses by the <i>Inca</i>, pre-Columbian emperors of South America.
+          According to an old legend, the stone is symbol of peace, forgiveness and deep love.
         </Text>
       </SideImage.container>
       <SideImage.container isEven alt="Woman with jewelry" src={"/vectors/jewelry.svg"}>
         <SideImage.title>See our work.</SideImage.title>
         <Text>
-          {"You can see our gallery or go to our "}
-          <SideImage.external fontWeight={400} href={instagram.url}>
-            {instagram.name}
-          </SideImage.external>
-          {" were we post our featured products periodically."}
+          You can see our work on the RhodoKros Instagram feed where we post our featured products
+          periodically.
         </Text>
-        <Link href="/gallery">Go to gallery</Link>
+        <SideImage.external href={instagram.url}>RhodoKros on Instagram</SideImage.external>
       </SideImage.container>
       <SideImage.container alt="Map illustration" src={"/vectors/map.svg"}>
         <SideImage.title>Visit our shop</SideImage.title>
         <Text>
           We are in <i>&quot;El conventillo de los sueños&quot;</i> at La Boca, Buenos Aires.
-          Usually from Monday to Saturday, between 10:00-16:00.
         </Text>
+        <Text>Usually from Monday to Saturday, between 10:00-16:00.</Text>
         <SideImage.external href="https://www.google.com/maps/place/RhodoKros/@-34.6398246,-58.3626528,15z/data=!4m5!3m4!1s0x0:0xf8455fab32e62143!8m2!3d-34.6398009!4d-58.3626664">
           See on Google Maps
         </SideImage.external>
