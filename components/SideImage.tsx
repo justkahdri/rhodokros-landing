@@ -12,7 +12,7 @@ const container: FC<Props> = ({children, isEven = false, ...rest}) => {
     <Stack
       as="section"
       direction={{base: "column", md: isEven ? "row-reverse" : "row"}}
-      height="700px"
+      height={{md: "700px"}}
       justifyContent="space-between"
       px={{base: 2, md: 6, lg: "8vw", "2xl": "15vw"}}
       py={12}
@@ -21,7 +21,7 @@ const container: FC<Props> = ({children, isEven = false, ...rest}) => {
       <Stack as="article" justify="center" spacing={6} width={{base: "auto", md: "50%"}}>
         {children}
       </Stack>
-      <Box as="figure" flex={1} height="100%" position="relative">
+      <Box as="figure" flex={{md: 1}} height={{base: "300px", md: "100%"}} position="relative">
         <Image alt="default side-image" layout="fill" objectFit="contain" {...rest} />
       </Box>
     </Stack>

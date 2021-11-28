@@ -4,7 +4,13 @@ import Image, {ImageProps} from "next/image";
 
 const ImageDivider = (props: ImageProps) => {
   return (
-    <Stack height="400px" maxW="1600px" mx="auto" position="relative" width="100%">
+    <Stack
+      height={{base: "400px", "2xl": "600px"}}
+      mx="auto"
+      my={{"2xl": 12}}
+      position="relative"
+      width="100%"
+    >
       <Image alt="Section Divider" layout="fill" objectFit="cover" {...props} />
     </Stack>
   );

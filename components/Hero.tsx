@@ -1,5 +1,5 @@
 import React from "react";
-import {Box, Flex, Heading, Text, Button, Stack} from "@chakra-ui/react";
+import {Box, Flex, Heading, Text} from "@chakra-ui/react";
 import Image from "next/image";
 
 import banner from "@images/banner_2.png";
