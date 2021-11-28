@@ -21,10 +21,10 @@ const Hero = () => {
           A journey to Argentina as you&apos;ve never seen before.
         </Heading>
         <Text mb={8} mt={6}>
-          Handmade jewelry with a strong relation with the country. Made with rhodochrosite and
+          Handcrafted jewelry with a strong relation with the country. Made with rhodochrosite and
           silver 925.
         </Text>
-        <Stack direction="row" height={12}>
+        {/* <Stack direction="row" height={12}>
           <Button
             as="a"
             colorScheme="primary"
@@ -41,12 +41,12 @@ const Hero = () => {
             flex={1}
             fontWeight={500}
             height="100%"
-            href="/about"
+            href="#about"
             variant="light"
           >
             About
           </Button>
-        </Stack>
+        </Stack> */}
       </Box>
       <Box
         alignSelf={{base: "center", md: "unset"}}

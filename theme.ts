@@ -5,6 +5,9 @@ const theme = extendTheme({
   useSystemColorMode: false,
   styles: {
     global: {
+      html: {
+        scrollBehavior: "smooth",
+      },
       body: {
         color: "blackAlpha.800",
       },

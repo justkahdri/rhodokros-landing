@@ -1,11 +1,12 @@
 import React from "react";
-import {Text, Link} from "@chakra-ui/react";
+import {Text} from "@chakra-ui/react";
 import type {NextPage} from "next";
 
 import SideImage from "@components/SideImage";
 import Hero from "@components/Hero";
 import Layout from "@components/Layout";
 import {instagram} from "@utils/links";
+import ImageDivider from "@components/ImageDivider";
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,8 @@ const Home: NextPage = () => {
           According to an old legend, the stone is symbol of peace, forgiveness and deep love.
         </Text>
       </SideImage.container>
+      <ImageDivider alt="Rhodochrosite stalactite" src="/images/stalactite.jpg" />
+
       <SideImage.container isEven alt="Woman with jewelry" src={"/vectors/jewelry.svg"}>
         <SideImage.title>See our work.</SideImage.title>
         <Text>
@@ -30,6 +33,7 @@ const Home: NextPage = () => {
         </Text>
         <SideImage.external href={instagram.url}>RhodoKros on Instagram</SideImage.external>
       </SideImage.container>
+      <ImageDivider alt="Workshop at La Boca" src="/images/frontdoor.jpg" />
       <SideImage.container alt="Map illustration" src={"/vectors/map.svg"}>
         <SideImage.title>Visit our shop</SideImage.title>
         <Text>
@@ -40,7 +44,13 @@ const Home: NextPage = () => {
           See on Google Maps
         </SideImage.external>
       </SideImage.container>
-      <SideImage.container isEven alt="Introductory illustration" src="/vectors/about.svg">
+      <ImageDivider alt="Guillermo Montes working at the workshop" src="/images/about.jpg" />
+      <SideImage.container
+        isEven
+        alt="Introductory illustration"
+        id="about"
+        src="/vectors/about.svg"
+      >
         <SideImage.title>About</SideImage.title>
         <Text>
           Guillermo Montes has been working with rhodochrosite and silver since 2005 and throughout
