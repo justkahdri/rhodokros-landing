@@ -18,6 +18,10 @@ const Layout: FC = ({children}) => {
       <Head>
         <title>{state.title}</title>
         <link href="/rhodokros.ico" rel="icon" type="image/x-icon" />
+        <meta
+          content="rhodokros, rhodochrosite, Rhodo, Guillermo Montes, Argentinian stone, argentina, argentinian jewelry, caminito, jewelry"
+          name="keywords"
+        />
 
         {/* <!-- Primary Meta Tags --> */}
         <meta content={state.title} name="title" />
